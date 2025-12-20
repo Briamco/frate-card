@@ -1,6 +1,24 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Invidivisa';
+  src: url('./assets/fonts/indivisa_display_sans-heavy.woff2') format('woff2'),
+       url('./assets/fonts/indivisa_display_sans-heavy.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+button {
+  @apply cursor-pointer;
+}
+
 @theme {
+--color-green: #098444;
+  --color-red: #c11521;
+  --color-blue: #0460b2;
+
+  --font-indivisa: 'Invidivisa', sans-serif;
+
   --animate-little-bounce: little-bounce 1s infinite;
   @keyframes little-bounce {
   0%, 100% {
