@@ -13,6 +13,13 @@ export const useCard = () => {
     })
   }, [])
 
+  const resetCards = () => {
+    setUsedCards(new Set())
+    import("../services/card").then(({ Cards }) => {
+      setCards(Cards)
+    })
+  }
+
   const getRandomCard = (): string | null => {
     if (cards.length === 0 || usedCards.size === cards.length) return null
 
@@ -37,5 +44,5 @@ export const useCard = () => {
     return covert?.src || null
   }
 
-  return { cards, getRandomCard, getCovert }
+  return { cards, getRandomCard, getCovert, resetCards }
 }
