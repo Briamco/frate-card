@@ -13,12 +13,12 @@ export interface Card {
   category: CardCategory
 }
 
-const imageModules = import.meta.glob('../assets/imgs/cards/**/*.{png,jpg,jpeg,svg,webp}', {
+const imageModules = import.meta.glob('/imgs/cards/**/*.png', {
   eager: true,
   as: 'url'
 });
 
-const covertsModules = import.meta.glob('../assets/imgs/cards/covert/*.{png,jpg,jpeg,svg,webp}', {
+const covertsModules = import.meta.glob('/imgs/cards/covert/*.png,jpg,jpeg,svg,webp', {
   eager: true,
   as: 'url'
 });
