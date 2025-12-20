@@ -13,7 +13,7 @@ button {
 }
 
 @theme {
---color-green: #098444;
+  --color-green: #098444;
   --color-red: #c11521;
   --color-blue: #0460b2;
 
