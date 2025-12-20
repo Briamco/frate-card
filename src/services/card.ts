@@ -13,41 +13,116 @@ export interface Card {
   category: CardCategory
 }
 
-const imageModules = import.meta.glob('/imgs/cards/**/*.png', {
-  eager: true,
-  as: 'url'
-});
+const Cards: Card[] = [
+  /* PREGUNTAS */
+  { src: 'imgs/cards/pregunta/1.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/2.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/3.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/4.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/5.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/6.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/7.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/8.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/9.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/10.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/11.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/12.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/13.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/14.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/15.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/16.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/17.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/18.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/19.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/20.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/21.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/22.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/23.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/24.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/25.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/26.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/pregunta/27.png', category: CardCategory.PREGUNTA },
+  /* MOMENTOS */
+  { src: 'imgs/cards/momento/29.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/30.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/31.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/32.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/33.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/34.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/35.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/36.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/37.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/38.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/39.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/40.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/41.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/42.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/43.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/44.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/45.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/46.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/47.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/48.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/momento/49.png', category: CardCategory.MOMENTO },
+  /* CONSEJOS */
+  { src: 'imgs/cards/consejo/51.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/52.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/53.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/54.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/55.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/56.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/57.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/58.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/59.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/60.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/61.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/62.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/63.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/64.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/65.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/66.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/67.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/consejo/68.png', category: CardCategory.CONSEJO },
+  /* ACCIONES */
+  { src: 'imgs/cards/accion/70.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/71.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/72.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/73.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/74.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/75.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/76.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/77.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/78.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/79.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/80.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/81.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/82.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/83.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/84.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/85.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/86.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/87.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/88.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/accion/89.png', category: CardCategory.ACCION },
+  /* RETOS */
+  { src: 'imgs/cards/reto/91.png', category: CardCategory.RETO },
+  { src: 'imgs/cards/reto/92.png', category: CardCategory.RETO },
+  { src: 'imgs/cards/reto/93.png', category: CardCategory.RETO },
+  { src: 'imgs/cards/reto/94.png', category: CardCategory.RETO },
+  { src: 'imgs/cards/reto/95.png', category: CardCategory.RETO },
+  { src: 'imgs/cards/reto/96.png', category: CardCategory.RETO },
+  { src: 'imgs/cards/reto/97.png', category: CardCategory.RETO },
+  { src: 'imgs/cards/reto/98.png', category: CardCategory.RETO },
+  { src: 'imgs/cards/reto/99.png', category: CardCategory.RETO },
+];
+const Coverts: Card[] = [
+  { src: 'imgs/cards/covert/pregunta.png', category: CardCategory.PREGUNTA },
+  { src: 'imgs/cards/covert/momento.png', category: CardCategory.MOMENTO },
+  { src: 'imgs/cards/covert/consejo.png', category: CardCategory.CONSEJO },
+  { src: 'imgs/cards/covert/accion.png', category: CardCategory.ACCION },
+  { src: 'imgs/cards/covert/reto.png', category: CardCategory.RETO },
+];
 
-const covertsModules = import.meta.glob('/imgs/cards/covert/*.png,jpg,jpeg,svg,webp', {
-  eager: true,
-  as: 'url'
-});
 
-const Cards: Card[] = [];
-const Coverts: Card[] = [];
-
-Object.keys(imageModules).forEach((path) => {
-  const pathParts = path.split('/');
-  const categoryIndex = pathParts.findIndex(part => part === 'cards') + 1;
-  const category = pathParts[categoryIndex]?.toUpperCase();
-
-  if (category && category in CardCategory) {
-    Cards.push({
-      src: imageModules[path] as string,
-      category: CardCategory[category as keyof typeof CardCategory],
-    });
-  }
-});
-
-Object.keys(covertsModules).forEach((path) => {
-  const fileName = path.split('/').pop()?.split('.')[0]?.toUpperCase();
-
-  if (fileName && fileName in CardCategory) {
-    Coverts.push({
-      src: covertsModules[path] as string,
-      category: CardCategory[fileName as keyof typeof CardCategory],
-    });
-  }
-});
 
 export { Cards, Coverts }
