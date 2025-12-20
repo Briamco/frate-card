@@ -52,7 +52,15 @@ function GamePage({ setPage }: GamePageProps) {
       </button>
       {
         cards.length === 0 ? (
-          <p>No tenemos cartas disponibles.</p>
+          <>
+            <p>No tenemos cartas disponibles.</p>
+            <button
+              className="action-btn absolute font-bold bg-blue text-white text-4xl px-4 py-8 rounded-2xl hover:bg-blue-600"
+              onClick={() => resetCards()}
+            >
+              Reiniciar juego
+            </button>
+          </>
         ) : (
           <>
             <button onClick={() => setRevealed(true)}>
@@ -61,7 +69,7 @@ function GamePage({ setPage }: GamePageProps) {
             </button>
 
             <button
-              className="absolute w-8/9 bottom-10 font-bold bg-blue text-white text-4xl px-4 py-8 rounded-2xl hover:bg-blue-600"
+              className="action-btn absolute font-bold bg-blue text-white text-4xl px-4 py-8 rounded-2xl hover:bg-blue-600"
               onClick={handleNewCard}
             >
               Nueva Carta

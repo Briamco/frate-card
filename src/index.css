@@ -12,6 +12,10 @@ button {
   @apply cursor-pointer;
 }
 
+.action-btn {
+  @apply w-10/12 md:w-1/2 bottom-5
+}
+
 @theme {
   --color-green: #098444;
   --color-red: #c11521;

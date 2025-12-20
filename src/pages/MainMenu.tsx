@@ -15,7 +15,7 @@ function MainMenu({ setPage }: MainMenuProps) {
         </h1>
       </div>
       <button
-        className="absolute w-8/9 bottom-10 font-bold bg-blue cursor-pointer text-white text-4xl px-4 py-8 rounded-2xl hover:bg-blue-600"
+        className="action-btn absolute font-bold bg-blue cursor-pointer text-white text-4xl px-4 py-8 rounded-2xl hover:bg-blue-600"
         onClick={() => setPage("game")}
       >
         Iniciar Juego
