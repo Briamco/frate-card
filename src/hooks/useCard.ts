@@ -44,5 +44,5 @@ export const useCard = () => {
     return covert?.src || null
   }
 
-  return { cards, getRandomCard, getCovert, resetCards }
+  return { cards, coverts, getRandomCard, getCovert, resetCards }
 }
